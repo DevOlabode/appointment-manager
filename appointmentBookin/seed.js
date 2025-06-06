@@ -48,12 +48,4 @@ const bookings = [
 ];
 
 Booking.insertMany(bookings)
-// const seedDB = async ()=>{
-//     Booking.deleteMany({});
-//     Booking.insertMany(bookings);
-//     console.log('Database seeded with appointment')
-// };
 
-// seedDB().then(()=>{
-//     mongoose.connection.close();
-// })
