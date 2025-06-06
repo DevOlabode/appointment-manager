@@ -16,6 +16,8 @@
     </ul>
     <a href="/booking/<%= booking._id %>/edit">Edit Appointment</a>
    <a href="/booking">Back to appointment list</a>
-   <a href="/booking/<%= booking._id %>/delete">Delete Appointment</a>
+  <form action="/booking/<%= booking._id %>?_method=delete" method="post">
+        <button>Delete Appointment</button>
+    </form>
 </body>
 </html>
