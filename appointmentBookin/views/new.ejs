@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Appointment.</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h3>Add a new appointment</h3>
+
+    <form action="/booking" method="post">
+        <label for="clientName">Client Name: </label>
+        <input type="text" name="clientName" placeholder="Enter the client name " id="clientName">
+
+        <label for="service">Service: </label>
+        <input type="text" name="service" placeholder="Enter the service" id="seervice">
+
+        <label for="date">Date Of Service:</label>
+        <input type="date" name="date" id="date">
+
+        <label for="time">Time: </label>
+        <input type="time" name="time" id="time">
+
+        <label for="status" id="status">Status</label>
+        <select name="status" id="status">
+            <option value="select">Select the status</option>
+            <% for(let statuse of status){ %>
+                <option value="<%= statuse %>"><%= statuse %></option>
+                <% } %>
+        </select>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

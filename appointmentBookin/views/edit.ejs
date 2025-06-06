@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing <%= appointment.service %> Appointment</title>
+        <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h3>Editing <i><%= appointment.service %></i> Appointment</h3>
+
+        <form action="/booking/<%= appointment._id %>?_method=put" method="post">
+        <label for="clientName">Client Name: </label>
+        <input type="text" name="clientName" placeholder="Enter the client name " id="clientName" value="<%= appointment.clientName %>">
+
+        <label for="service">Service: </label>
+        <input type="text" name="service" placeholder="Enter the service" id="service" value="<%= appointment.service %>">
+
+        <label for="date">Date Of Service:</label>
+        <input type="date" name="date" id="date" value="<%= appointment.date %>">
+
+        <label for="time">Time: </label>
+        <input type="time" name="time" id="time" value="<%= appointment.time %>">
+
+        <label for="status">Appointment Status</label>
+        <select name="status" id="status">
+              <% for(let statuse of status){ %>
+                <option value="<%= statuse %>" <%= appointment.status === statuse ? 'selected' : '' %>><%= statuse %></option>
+                <% } %>
+        </select>
+
+        <button>Edit Appointment</button>
+    </form>
+
+    <a href="/booking/<%= appointment._id %>">Cancel Edit</a>
+</body>
+</html>

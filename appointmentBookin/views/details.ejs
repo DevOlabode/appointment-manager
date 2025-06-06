@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= booking.service %> Appointment.</title>
+</head>
+<body>
+    <h3><%= booking.service %> Appointment.</h3>
+
+    <ul>
+        <li> Client Name : <b> <%= booking.clientName %> </b></li>
+        <li> Date : <b> <%= booking.date %> </b></li>
+        <li> Time : <b> <%= booking.time %> </b></li>
+        <li> Status : <b> <%= booking.status %> </b></li>
+    </ul>
+    <a href="/booking/<%= booking._id %>/edit">Edit Appointment</a>
+   <a href="/booking">Back to appointment list</a>
+   <a href="/booking/<%= booking._id %>/delete">Delete Appointment</a>
+</body>
+</html>
