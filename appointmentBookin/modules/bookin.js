@@ -21,7 +21,7 @@ const bookingSchema = new mongoose.Schema({
     },
     time : {
         type : String,
-        required : true,
+        required : false,
     }
 });
 
