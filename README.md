@@ -21,6 +21,8 @@ Homepage:
 Appointments List:  
 `http://localhost:3000/booking`
 
+![Appointment List](images/appointment.png)
+
 ## Technologies Used
 
 - **Node.js** + **Express**
