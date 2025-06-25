@@ -43,6 +43,8 @@ npm install
 
 ![new appointment](images/new.png)
 
+![error handling](images/error.png)
+
 ## Usage
 
 1. Ensure MongoDB is running locally on port 27017.
