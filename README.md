@@ -13,6 +13,8 @@ A simple Node.js and Express application for managing client bookings with Mongo
 
 ## Demo
 
+[Live Demo](https://appointment-manager-3.onrender.com/)
+
 Homepage:  
 `http://localhost:3000/`
 
