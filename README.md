@@ -35,6 +35,8 @@ cd appointment-manager
 npm install
 ```
 
+## ScreenShots
+
 ## Usage
 
 1. Ensure MongoDB is running locally on port 27017.
