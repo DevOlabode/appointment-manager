@@ -16,6 +16,8 @@ A simple Node.js and Express application for managing client bookings with Mongo
 Homepage:  
 `http://localhost:3000/`
 
+![Homepage](images/home.png)
+
 Appointments List:  
 `http://localhost:3000/booking`
 
@@ -36,7 +38,6 @@ npm install
 ```
 
 ## ScreenShots
-![Homepage](images/home.png)
 ## Usage
 
 1. Ensure MongoDB is running locally on port 27017.
