@@ -1,0 +1,21 @@
+<% layout('/layout/boilerplate.ejs') %>
+
+<h3 class="text-primary border-bottom pb-2 mb-4"><%= booking.service %> Appointment</h3>
+<div class="card mb-4">
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Client Name: <strong><%= booking.clientName %></strong></li>
+      <li class="list-group-item">Service: <strong><%= booking.service %></strong></li>
+      <li class="list-group-item">Date: <strong><%= booking.date %></strong></li>
+      <li class="list-group-item">Time: <strong><%= booking.time %></strong></li>
+      <li class="list-group-item">Status: <strong><%= booking.status %></strong></li>
+    </ul>
+  </div>
+</div>
+<div class="d-flex gap-2">
+  <a href="/booking/<%= booking._id %>/edit" class="btn btn-warning">Edit Appointment</a>
+  <a href="/booking" class="btn btn-secondary">Back to List</a>
+  <form action="/booking/<%= booking._id %>?_method=delete" method="post" class="d-inline">
+    <button class="btn btn-danger">Delete Appointment</button>
+  </form>
+</div>

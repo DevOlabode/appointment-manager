@@ -1,0 +1,47 @@
+<% layout('/layout/boilerplate.ejs') %>
+
+<h3 class="fs-4 text-primary mb-4">
+  Editing <%= appointment.service.toUpperCase() %> Appointment
+</h3>
+
+<form action="/booking/<%= appointment._id %>?_method=put" method="post" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="clientName" class="form-label">Client Name</label>
+    <input type="text" class="form-control" id="clientName" name="clientName" value="<%= appointment.clientName %>" required>
+    <div class="valid-feedback">Looks good</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="service" class="form-label">Service</label>
+    <input type="text" class="form-control" id="service" name="service" value="<%= appointment.service %>" required>
+    <div class="valid-feedback">Looks good</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" class="form-control" name="date" id="date" value="<%= appointment.date %>" required>
+    <div class="valid-feedback">Looks good</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="time" class="form-label">Appointment Time</label>
+    <input type="time" class="form-control" id="time" name="time" value="<%= appointment.time %>" required>
+    <div class="valid-feedback">Looks good</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="status" class="form-label">Appointment Status</label>
+    <select class="form-select" name="status" required>
+      <option disabled>Select the status:</option>
+      <% for(let statuse of status) { %>
+        <option value="<%= statuse %>" <%= appointment.status === statuse ? 'selected' : '' %>><%= statuse %></option>
+      <% } %>
+    </select>
+    <div class="valid-feedback">Looks good</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/booking" class="btn btn-secondary">Back</a>
+  </div>
+</form>

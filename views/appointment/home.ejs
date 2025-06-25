@@ -1,0 +1,56 @@
+<% layout('/layout/boilerplate.ejs') %>
+
+<div class="text-center my-5">
+  <h1 class="display-5 fw-bold text-primary">Welcome to Appointment Manager</h1>
+  <p class="lead text-muted">Schedule, manage, and view your appointments with ease.</p>
+</div>
+
+<div class="row g-4 justify-content-center">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body text-center">
+        <h5 class="card-title">View Appointments</h5>
+        <p class="card-text">Browse all scheduled appointments in one organized list.</p>
+        <a href="/booking" class="btn btn-outline-primary">Go to Appointments</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body text-center">
+        <h5 class="card-title">Create Appointment</h5>
+        <p class="card-text">Quickly add a new appointment to the schedule.</p>
+        <a href="/booking/new" class="btn btn-outline-success">Create Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="my-5">
+
+<div class="accordion my-5" id="tipsAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+        How to Create an Appointment
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#tipsAccordion">
+      <div class="accordion-body">
+        Go to <strong>New Appointment</strong>, fill out the form, and hit Submit. That’s it!
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+        Can I edit or delete later?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#tipsAccordion">
+      <div class="accordion-body">
+        Yup! Click any appointment in the list, and you’ll find Edit and Delete options.
+      </div>
+    </div>
+  </div>
+</div>

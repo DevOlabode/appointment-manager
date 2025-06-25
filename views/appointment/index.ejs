@@ -1,0 +1,12 @@
+<% layout('/layout/boilerplate.ejs') %>
+
+<h3 class="fs-4 p-4 text-success border-bottom">Appointment List</h3>
+<ul class="list-group">
+  <% for (let booking of bookings) { %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <a href="/booking/<%= booking._id %>" class="text-decoration-none text-primary"><%= booking.service %></a>
+      <span class="badge bg-success rounded-pill">View</span>
+    </li>
+  <% } %>
+</ul>
+<a href="/booking/new" class="btn btn-primary mt-3">Add a New Appointment</a>
